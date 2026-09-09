@@ -6,9 +6,9 @@
 
 ## 2. Student Information
 
--   **Student Name:** Letlhogonolo Sithole
+-   **Student Name:** Letlhogonolo Mfumo Phillip Sithole
 -   **Student Number:** ST10478370
--   **Project:** Website Project -- Part 1
+-   **Project:** Website Project -- Part 1 (Completed & Graded: 89/100)
 -   **Organisation:** Isipho Donations
 -   **Website Type:** Non-profit / donation website
 
@@ -28,13 +28,7 @@ organisation easier to understand and to encourage people to get
 involved through donating, volunteering or contacting Isipho Donations.
 
 The website was developed as a multi-page website using HTML for the
-structure of the pages. HTML is used to structure web content such as
-headings, paragraphs, images and links (Mozilla Developer Network,
-2025a). CSS is included in the project for the presentation and layout
-of the website, while JavaScript can be used to add interactive
-functionality as the project develops (Mozilla Developer Network, 2025b;
-Mozilla Developer Network, 2025c). Visual Studio Code is being used as
-the development environment (Microsoft, n.d.).
+structure of the pages (Mozilla Developer Network, 2025a). CSS was successfully implemented and styled for the presentation and layout of the website, while JavaScript is structured into the project folders for interactive functionality (Mozilla Developer Network, 2025b; Mozilla Developer Network, 2025c). Visual Studio Code was used as the development environment (Microsoft, n.d.).
 
 ## 4. Website Goals and Objectives
 
@@ -99,7 +93,7 @@ can move around the website easily. The main navigation includes:
 The project uses:
 
 -   **HTML5** -- used for the structure and content of the website.
--   **CSS** -- used for the appearance, layout and styling.
+-   **CSS** -- implemented and styled for appearance, layout, and colour themes.
 -   **JavaScript** -- included for interactive functionality as the
     website develops.
 -   **Visual Studio Code** -- used as the development environment.
@@ -109,63 +103,55 @@ The project uses:
 ## 6. Timeline and Milestones
 
   -----------------------------------------------------------------------
-  Stage                   Activity                Status
+  Stage                 Activity                Status
   ----------------------- ----------------------- -----------------------
-  Milestone 1             Select the website idea Completed
-                          and organisation        
+  Milestone 1           Select the website idea Completed
+                        and organisation        
 
-  Milestone 2             Create the project      Completed
-                          folder and HTML pages   
+  Milestone 2           Create the project      Completed
+                        folder and HTML pages   
 
-  Milestone 3             Create the Home, About  Completed
-                          Us, Services, Gallery   
-                          and Contact Us pages    
+  Milestone 3           Create the Home, About  Completed
+                        Us, Services, Gallery   
+                        and Contact Us pages    
 
-  Milestone 4             Add navigation between  Completed
-                          the pages               
+  Milestone 4           Add navigation between  Completed
+                        the pages               
 
-  Milestone 5             Add donation images and Completed
-                          gallery content         
+  Milestone 5           Add donation images and Completed
+                        gallery content         
 
-  Milestone 6             Create and organise CSS In progress
-                          and JavaScript folders  
+  Milestone 6           Create and organise CSS Completed
+                        and JavaScript folders  
 
-  Milestone 7             Improve the visual      Planned
-                          design and              
-                          responsiveness          
+  Milestone 7           Improve the visual      Completed 
+                        design and              
+                        responsiveness          
 
-  Milestone 8             Test all links, images  Planned
-                          and website             
-                          functionality           
+  Milestone 8           Test all links, images  Completed 
+                        and website             
+                        functionality           
 
-  Milestone 9             Update documentation    Planned
-                          and prepare final       
-                          submission              
+  Milestone 9           Update documentation    Completed 
+                        and prepare final       
+                        submission              
   -----------------------------------------------------------------------
 
-## 7. Part 1 Details
+## 7. Part 1 Details & Feedback Integration
 
-Part 1 focuses on establishing the foundation of the Isipho Donations
-website.
+Part 1 focused on establishing the foundation of the Isipho Donations
+website, achieving a strong score of **89/100 (89%)** on 27 August 2026. 
 
-The work completed for Part 1 includes:
+Feedback from Part 1 has been successfully reviewed and incorporated into the current repository structure, including enhancements to CSS styling, responsive layout breakpoints, and structured documentation.
 
+The work completed covers:
 -   Selecting Isipho Donations as the organisation.
--   Creating the website project folder.
--   Creating the main HTML pages.
--   Creating navigation links between the pages.
--   Creating the About Us content.
--   Creating a Services page.
--   Creating a Gallery page.
--   Creating a Contact Us page.
+-   Creating the website project folder and core HTML pages.
+-   Establishing navigation links between pages.
+-   Developing About Us, Services, Gallery, and Contact Us content.
 -   Adding donation-related images.
--   Creating CSS and JavaScript folders for the website structure.
--   Starting the project documentation through this README file.
-
-Parts 2 and 3 will be added and documented in future submissions or
-edits. These parts may include additional styling, functionality,
-testing, improvements and other requirements provided for the next
-stages of the project.
+-   Setting up CSS and JavaScript folders and writing responsive external stylesheets.
+-   Maintaining project documentation and tracking updates through this README file.
 
 ## 8. Sitemap
 
@@ -190,14 +176,13 @@ Isipho Donations Website
 │   └── Donation Image 5
 │
 └── Contact Us (contact us.html)
-```
 
 ## 9. Project Structure
 
-``` text
 My Business Proposal/
 │
 ├── CSS/
+│   └── style.css
 ├── JS/
 ├── images/
 │   ├── donation 1.jpg
@@ -213,56 +198,42 @@ My Business Proposal/
 ├── gallery.html
 ├── contact us.html
 └── README.md
-```
 
 ## 10. Changelog
 
-The changelog will be used to keep track of changes made to the website
-throughout the project.
+ersion 0.1 -- Initial Website Setup
+Created the Isipho Donations website project.
 
-### Version 0.1 -- Initial Website Setup
+Created the main HTML pages and basic organisation information.
 
--   Created the Isipho Donations website project.
--   Created the main HTML pages.
--   Added basic organisation information.
--   Added navigation links between pages.
--   Added donation images.
--   Created CSS and JavaScript folders.
+Added navigation links between pages and initial image assets.
 
-### Version 0.2 -- Content and Page Development
+Version 0.2 -- Content and Page Development
+Developed About Us, Services, Gallery, and Contact Us pages.
 
--   Developed the About Us page.
--   Added organisation overview and mission information.
--   Added the Services page.
--   Added the Gallery page and donation images.
--   Added the Contact Us page.
+Structured CSS and JavaScript folders for subsequent styling work.
 
-### Future Updates
+Version 1.0 -- Part 1 Graded & Feedback Integration (89%)
+Received formal feedback and a score of 89/100 on 27 August 2026.
 
--   Improve the website styling.
--   Add more JavaScript functionality where required.
--   Improve the gallery presentation.
--   Test all navigation links and images.
--   Improve the website for different screen sizes.
--   Add any additional features required for Parts 2 and 3.
+Implemented external CSS styling, relative sizing (rem), and flexbox layout properties.
+
+Added responsive media queries and refined content alignment.
+
+Future Updates
+Add advanced JavaScript functionality for upcoming project phases.
+
+Further refine layout responsiveness across mobile and tablet viewports.
 
 ## 11. References
 
-Microsoft, n.d. *Visual Studio Code documentation*. Available at:
-https://code.visualstudio.com/docs \[Accessed 13 August 2026\].
+Microsoft, n.d. Visual Studio Code documentation. Available at: https://code.visualstudio.com/docs [Accessed 13 August 2026].
 
-Mozilla Developer Network, 2025a. *HTML: Creating the content*.
-Available at:
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-\[Accessed 13 August 2026\].
+Mozilla Developer Network, 2025a. HTML: Creating the content. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content [Accessed 13 August 2026].
 
-Mozilla Developer Network, 2025b. *CSS: Cascading Style Sheets*.
-Available at: https://developer.mozilla.org/en-US/docs/Web/CSS
-\[Accessed 13 August 2026\].
+Mozilla Developer Network, 2025b. CSS: Cascading Style Sheets. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 13 August 2026].
 
-Mozilla Developer Network, 2025c. *What is JavaScript?* Available at:
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript
-\[Accessed 13 August 2026\].
+Mozilla Developer Network, 2025c. What is JavaScript? Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/What_is_JavaScript [Accessed 13 August 2026].
 
 ## 12. Referencing Note
 
@@ -272,3 +243,5 @@ have been included in the Project Overview where information from these
 sources is discussed. The reference list follows the IIE Harvard-Anglia
 approach for online sources, including the author/organisation, year,
 title, URL and access date.
+
+
