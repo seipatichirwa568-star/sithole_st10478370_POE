@@ -1,9 +1,12 @@
+
+/* Global reset for consistent box sizing and margins */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Body styling with background color and font family */
 body {
     background-color: #fdfbf7;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -11,6 +14,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header layout using flexbox */
 header {
     background-color: #f4eae1;
     padding: 1.2rem 2rem;
@@ -21,12 +25,14 @@ header {
     justify-content: space-between;
 }
 
+/* Responsive header styling for screens 768px and wider */
 @media (min-width: 768px) {
     header {
         flex-direction: row;
     }
 }
 
+/* Logo styling */
 .logo {
     font-size: 1.6rem;
     font-weight: bold;
@@ -40,6 +46,7 @@ header {
     }
 }
 
+/* Navigation layout and links */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -67,7 +74,7 @@ nav a:active {
     color: #2c2c2c;
 }
 
-/* Typography */
+/* Typography styles */
 h1 {
     font-size: 2.4rem;
     font-weight: bold;
@@ -88,6 +95,7 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Main content wrapper and background image */
 .main-content {
     background-image: url('images.jpg');
     background-size: cover;
@@ -103,6 +111,7 @@ p {
     border-radius: 8px;
 }
 
+/* Main tag centering constraints */
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -113,6 +122,7 @@ section {
     margin-bottom: 2rem;
 }
 
+/* Unordered list and list item styling */
 ul {
     list-style-type: disc;
     margin-left: 1.5rem;
@@ -124,6 +134,7 @@ li {
     margin-bottom: 0.4rem;
 }
 
+/* Footer layout and text styling */
 footer {
     background-color: #f4eae1;
     text-align: center;
@@ -134,6 +145,7 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Mobile responsive media query for smaller screens */
 @media (max-width: 600px) {
     h1 {
         font-size: 1.8rem;
