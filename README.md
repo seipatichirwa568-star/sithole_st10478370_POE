@@ -265,7 +265,7 @@ The website includes:
 - `robots.txt` – provides instructions to search engine crawlers.
 - `sitemap.xml` – lists website pages to help search engines discover them.
 
-The final published sitemap should use the current Netlify website address.
+The sitemap now lists the six published Netlify page URLs. The robots.txt file points to the published sitemap.
 
 ### SEO Verification
 
@@ -316,7 +316,7 @@ The following tests and checks were recorded during Part 3 development.
 | Enquiry Form | Test submission successfully received by Netlify. |
 | Form Submission Feedback | Enquiry page displayed a submission confirmation. |
 | Netlify Form Detection | Both forms successfully detected. |
-| SEO Files | Included; final live URL verification required. |
+| SEO Files | Sitemap XML verified and robots.txt configured to point to the published sitemap; recheck after the final deployment. |
 
 ### Form Submission Results
 
@@ -419,6 +419,15 @@ These results confirm that Netlify received the test submissions. Further browse
 - Confirmed successful Enquiry form submission.
 - Recorded the final outstanding checks.
 
+### Version 3.2 – Final file review
+
+**Date: 18 October 2026**
+
+- Matched all external CSS references to `CSS/style.css` and JavaScript references to `JS/script.js`, including the exact folder capitalisation.
+- Corrected `robots.txt` to point to the published `sitemap.xml` rather than just the homepage.
+- Confirmed that the sitemap parses as valid XML and lists all six webpages.
+- Prepared a clean website package without the duplicate image folder or `.git` directory.
+
 This changelog documents the website's development. The actual commit history remains available in the GitHub repository.
 
 ## 12. Running the Website Locally
@@ -450,7 +459,7 @@ Before the final assessment, the following items should be verified:
 
 - Confirm that all six pages work on mobile and desktop.
 - Check that the interactive map loads on the published website.
-- Confirm that the sitemap and robots file contain the correct live website address.
+- Recheck the sitemap and robots file after the final Netlify deployment.
 - Review page keywords, titles and meta descriptions against the rubric.
 - Check that form validation and submission feedback work correctly.
 - Verify permission to publish the photographs and add image attribution where needed.
