@@ -332,7 +332,7 @@ document.addEventListener('DOMContentLoaded', () => {
               'Your request was sent to the server. Confirm that it appears in your Netlify Forms dashboard.';
           } else {
             status.textContent =
-              'Form submitted. Please confirm it appears in the Netlify Forms dashboard.';
+              'Thank you! Your message has been sent successfully.';
             form.reset();
           }
 
