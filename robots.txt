@@ -1,5 +1,6 @@
 
+
 User-agent: *
 Allow: /
 
-Sitemap: https://illustrious-douhua-00713d.netlify.app/sitemap.xml
+Sitemap: https://illustrious-douhua-00713d.netlify.app
