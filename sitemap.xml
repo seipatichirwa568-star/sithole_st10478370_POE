@@ -1,10 +1,29 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace the example domain with your actual live Netlify address before submission. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://REPLACE-WITH-YOUR-SITE.netlify.app/</loc></url>
-  <url><loc>https://REPLACE-WITH-YOUR-SITE.netlify.app/about%20us.html</loc></url>
-  <url><loc>https://REPLACE-WITH-YOUR-SITE.netlify.app/services.html</loc></url>
-  <url><loc>https://REPLACE-WITH-YOUR-SITE.netlify.app/gallery.html</loc></url>
-  <url><loc>https://REPLACE-WITH-YOUR-SITE.netlify.app/enquiry.html</loc></url>
-  <url><loc>https://REPLACE-WITH-YOUR-SITE.netlify.app/contact%20us.html</loc></url>
+
+    <url>
+        <loc>https://illustrious-douhua-00713d.netlify.app/</loc>
+    </url>
+
+    <url>
+        <loc>https://illustrious-douhua-00713d.netlify.app/about%20us.html</loc>
+    </url>
+
+    <url>
+        <loc>https://illustrious-douhua-00713d.netlify.app/services.html</loc>
+    </url>
+
+    <url>
+        <loc>https://illustrious-douhua-00713d.netlify.app/gallery.html</loc>
+    </url>
+
+    <url>
+        <loc>https://illustrious-douhua-00713d.netlify.app/enquiry.html</loc>
+    </url>
+
+    <url>
+        <loc>https://illustrious-douhua-00713d.netlify.app/contact%20us.html</loc>
+    </url>
+
 </urlset>
