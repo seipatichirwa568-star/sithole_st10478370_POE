@@ -1,245 +1,388 @@
-// Service information used to create the cards.
-const donationServices = [
-    {
-        name: "Food Donations",
-        description:
-            "We collect and distribute food parcels to families and individuals who are experiencing food insecurity."
-    },
-    {
-        name: "Clothing Donations",
-        description:
-            "We collect clothing and distribute it to people and families who need support."
-    },
-    {
-        name: "School Supplies",
-        description:
-            "We assist learners by providing school supplies and other educational resources where possible."
-    },
-    {
-        name: "Community Support",
-        description:
-            "We work with communities to identify people who require assistance and connect them with available resources."
-    },
-    {
-        name: "Donation Collection",
-        description:
-            "We accept donations from individuals, businesses and organisations that would like to support our work."
-    }
-];
 
-const serviceList = document.getElementById("service-list");
-const serviceSearch = document.getElementById("service-search");
-const serviceSort = document.getElementById("service-sort");
-const serviceResults = document.getElementById("service-results");
-const serviceReset = document.getElementById("service-reset");
+'use strict';
 
-// Only run this section when the Services page elements exist.
-if (
-    serviceList &&
-    serviceSearch &&
-    serviceSort &&
-    serviceResults &&
-    serviceReset
-) {
-    function displayServices() {
-        const searchText = serviceSearch.value.trim().toLowerCase();
+// Isipho Donations - WEDE5020 Part 3
+// All the website's JavaScript is kept in this external file.
 
-        // Search both the service name and its description.
-        let matchingServices = donationServices.filter(function (service) {
-            const serviceText =
-                service.name + " " + service.description;
+document.addEventListener('DOMContentLoaded', () => {
 
-            return serviceText.toLowerCase().includes(searchText);
-        });
+  // 1. Mobile navigation
+  const menuButton = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.site-nav');
 
-        // Sort the filtered results without changing the original data.
-        if (serviceSort.value === "az") {
-            matchingServices.sort(function (first, second) {
-                return first.name.localeCompare(second.name);
-            });
-        } else if (serviceSort.value === "za") {
-            matchingServices.sort(function (first, second) {
-                return second.name.localeCompare(first.name);
-            });
-        }
-
-        // Remove the old cards before displaying the current results.
-        serviceList.replaceChildren();
-
-        matchingServices.forEach(function (service) {
-            const card = document.createElement("article");
-            card.className = "service-card";
-
-            const heading = document.createElement("h3");
-            heading.textContent = service.name;
-
-            const description = document.createElement("p");
-            description.textContent = service.description;
-
-            card.append(heading, description);
-            serviceList.appendChild(card);
-        });
-
-        if (matchingServices.length === 0) {
-            serviceResults.textContent =
-                "No services found. Try another word or select Reset.";
-        } else {
-            const resultWord =
-                matchingServices.length === 1 ? "service" : "services";
-
-            serviceResults.textContent =
-                matchingServices.length + " " + resultWord + " found.";
-        }
-    }
-
-    serviceSearch.addEventListener("input", displayServices);
-    serviceSort.addEventListener("change", displayServices);
-
-    serviceReset.addEventListener("click", function () {
-        serviceSearch.value = "";
-        serviceSort.value = "default";
-        displayServices();
-        serviceSearch.focus();
+  if (menuButton && nav) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      menuButton.firstChild.textContent = isOpen ? '✕ ' : '☰ ';
     });
 
-    // Show all services when the page first loads.
-    displayServices();
-}
-// Validate the Contact form and prepare an email.
-const contactForm = document.getElementById("contact-form");
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('is-open');
+        menuButton.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 
-if (contactForm) {
-    const contactName = document.getElementById("contact-name");
-    const contactEmail = document.getElementById("contact-email");
-    const contactPhone = document.getElementById("contact-phone");
-    const contactType = document.getElementById("contact-type");
-    const contactMessage = document.getElementById("contact-message");
-    const contactStatus = document.getElementById("contact-status");
-    const contactEmailLink = document.getElementById("contact-email-link");
+  // 2. Reveal animations when scrolling
+  if ('IntersectionObserver' in window &&
+      !matchMedia('(prefers-reduced-motion: reduce)').matches) {
 
-    const contactFields = [
-        contactName,
-        contactEmail,
-        contactPhone,
-        contactType,
-        contactMessage
+    const elements = document.querySelectorAll('.reveal');
+    document.body.classList.add('js-ready');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    elements.forEach(element => observer.observe(element));
+  }
+
+  // 3. Searchable and sortable service cards
+  const serviceGrid = document.querySelector('#services-grid');
+
+  if (serviceGrid) {
+    const services = [
+      {
+        name: 'Food donations',
+        category: 'Essentials',
+        icon: '✿',
+        colour: 'coral-icon',
+        description: 'Collecting food parcels and pantry basics to support people experiencing food insecurity.'
+      },
+      {
+        name: 'Clothing support',
+        category: 'Essentials',
+        icon: '♡',
+        colour: 'gold-icon',
+        description: 'Encouraging donations of clean, usable clothing for people who need them.'
+      },
+      {
+        name: 'School supplies',
+        category: 'Education',
+        icon: '▤',
+        colour: 'green-icon',
+        description: 'Supporting access to books, stationery and learning materials for schoolchildren.'
+      },
+      {
+        name: 'Volunteer opportunities',
+        category: 'People',
+        icon: '✦',
+        colour: 'coral-icon',
+        description: 'Helping community-minded people ask how their time and skills could make a difference.'
+      },
+      {
+        name: 'Local partnerships',
+        category: 'Community',
+        icon: '✳',
+        colour: 'green-icon',
+        description: 'Bringing together schools, local businesses and community partners.'
+      },
+      {
+        name: 'Donation enquiries',
+        category: 'Get involved',
+        icon: '↗',
+        colour: 'gold-icon',
+        description: 'Giving supporters a simple way to ask what items may be useful and how to contribute.'
+      }
     ];
 
-    // Use our field messages when JavaScript is available.
-    // Native HTML validation remains available without JavaScript.
-    contactForm.noValidate = true;
+    const search = document.querySelector('#service-search');
+    const sort = document.querySelector('#service-sort');
+    const count = document.querySelector('#service-count');
 
-    function showContactError(field, message) {
-        const error = document.getElementById(field.id + "-error");
-        error.textContent = message;
-        field.setAttribute("aria-invalid", message ? "true" : "false");
+    function renderServices() {
+      const term = search.value.trim().toLowerCase();
+
+      const items = services.filter(service =>
+        `${service.name} ${service.category} ${service.description}`
+          .toLowerCase().includes(term)
+      );
+
+      if (sort.value === 'az') {
+        items.sort((a, b) => a.name.localeCompare(b.name));
+      }
+
+      if (sort.value === 'za') {
+        items.sort((a, b) => b.name.localeCompare(a.name));
+      }
+
+      serviceGrid.replaceChildren();
+
+      items.forEach(service => {
+        const card = document.createElement('article');
+        card.className = 'feature-card service-card';
+
+        const badge = document.createElement('span');
+        badge.className = `feature-icon ${service.colour}`;
+        badge.textContent = service.icon;
+
+        const category = document.createElement('span');
+        category.className = 'tag';
+        category.textContent = service.category;
+
+        const name = document.createElement('h3');
+        name.textContent = service.name;
+
+        const description = document.createElement('p');
+        description.textContent = service.description;
+
+        const link = document.createElement('a');
+        link.href = 'enquiry.html';
+        link.textContent = 'Ask about this →';
+
+        card.append(badge, category, name, description, link);
+        serviceGrid.append(card);
+      });
+
+      if (items.length === 0) {
+        const empty = document.createElement('p');
+        empty.className = 'empty-state';
+        empty.textContent = 'No matching services. Try food, school, or volunteering.';
+        serviceGrid.append(empty);
+      }
+
+      count.textContent = `${items.length} of ${services.length} services shown`;
     }
 
-    // Editing the form makes any previously prepared email outdated.
-    contactFields.forEach(function (field) {
-        field.addEventListener("input", function () {
-            showContactError(field, "");
-            contactEmailLink.hidden = true;
-            contactEmailLink.removeAttribute("href");
-            contactStatus.textContent = "";
-        });
+    search.addEventListener('input', renderServices);
+    sort.addEventListener('change', renderServices);
+    renderServices();
+  }
+
+  // 4. Gallery lightbox
+  const dialog = document.querySelector('#gallery-dialog');
+
+  if (dialog) {
+    const largeImage = document.querySelector('#lightbox-image');
+    const caption = document.querySelector('#lightbox-caption');
+
+    document.querySelectorAll('.gallery-tile').forEach(tile => {
+      tile.addEventListener('click', () => {
+        largeImage.src = tile.dataset.image;
+        largeImage.alt = tile.dataset.alt;
+        caption.textContent = tile.dataset.caption;
+        dialog.showModal();
+      });
     });
 
-    contactForm.addEventListener("submit", function (event) {
+    document.querySelector('#close-lightbox')
+      .addEventListener('click', () => dialog.close());
+
+    dialog.addEventListener('click', event => {
+      if (event.target === dialog) dialog.close();
+    });
+  }
+
+  // 5. Interactive map with Leaflet
+  const mapContainer = document.querySelector('#community-map');
+
+  if (mapContainer) {
+    if (typeof L !== 'undefined') {
+      const map = L.map(mapContainer).setView([-25.7479, 28.2293], 12);
+
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 18,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+
+      L.marker([-25.7479, 28.2293]).addTo(map)
+        .bindPopup(
+          '<strong>Pretoria city centre</strong><br>Illustrative service area, not a verified Isipho office.'
+        );
+    } else {
+      mapContainer.textContent =
+        'Map could not load. Use the OpenStreetMap link below.';
+    }
+  }
+
+  // 6. Enquiry form guidance
+  const interest = document.querySelector('#enq-type');
+  const preview = document.querySelector('#enquiry-preview');
+
+  if (interest && preview) {
+    const guidance = {
+      food: 'Food enquiry: Tell us which items you would like to give, the approximate quantity and when they may be available. Availability is not confirmed automatically.',
+      clothes: 'Clothing enquiry: Mention the types and sizes of clean clothing available so arrangements can be discussed.',
+      school: 'School supplies: Tell us whether you have stationery, books or other learning materials.',
+      volunteer: 'Volunteer enquiry: Share the kinds of activities you enjoy and your general availability. No placement is guaranteed.',
+      partner: 'Partnership enquiry: Describe your school, business or community group and the support you have in mind.'
+    };
+
+    interest.addEventListener('change', () => {
+      preview.textContent =
+        guidance[interest.value] || 'Choose a topic to see some guidance.';
+    });
+  }
+
+  // 7. Form validation
+  function validateForm(form) {
+    let valid = true;
+
+    form.querySelectorAll('input:not([type="hidden"]), select, textarea')
+      .forEach(field => {
+
+        const error = form.querySelector(`[data-error-for="${field.id}"]`);
+        if (!error) return;
+
+        field.setCustomValidity('');
+
+        const value = field.value.trim();
+        let message = '';
+
+        if (field.required && !value) {
+          message = 'Please complete this field.';
+        } else if (
+          value && field.type === 'email' && !field.validity.valid
+        ) {
+          message = 'Enter a valid email address.';
+        } else if (value && field.validity.patternMismatch) {
+          message = 'Check the phone number format.';
+        } else if (
+          value && field.minLength > 0 && value.length < field.minLength
+        ) {
+          message = `Use at least ${field.minLength} characters.`;
+        } else if (
+          value && field.maxLength > 0 && value.length > field.maxLength
+        ) {
+          message = `Use no more than ${field.maxLength} characters.`;
+        }
+
+        field.setAttribute('aria-invalid', String(Boolean(message)));
+        error.textContent = message;
+
+        if (message) valid = false;
+      });
+
+    return valid;
+  }
+
+  // 8. AJAX submissions using Netlify Forms
+  document.querySelectorAll('#contact-form, #enquiry-form')
+    .forEach(form => {
+
+      const status = form.querySelector('.form-status');
+
+      form.querySelectorAll('input,textarea,select')
+        .forEach(field => {
+
+          field.addEventListener('input', () => {
+            if (field.id) {
+              const error = form.querySelector(
+                `[data-error-for="${field.id}"]`
+              );
+
+              if (error) {
+                error.textContent = '';
+                field.removeAttribute('aria-invalid');
+              }
+            }
+          });
+        });
+
+      form.addEventListener('submit', async event => {
         event.preventDefault();
 
-        contactEmailLink.hidden = true;
-        contactEmailLink.removeAttribute("href");
-
-        contactFields.forEach(function (field) {
-            showContactError(field, "");
-        });
-
-        let firstInvalidField = null;
-
-        function markInvalid(field, message) {
-            showContactError(field, message);
-
-            if (!firstInvalidField) {
-                firstInvalidField = field;
-            }
+        if (!validateForm(form)) {
+          status.textContent = 'Please fix the highlighted fields.';
+          const invalid = form.querySelector('[aria-invalid="true"]');
+          if (invalid) invalid.focus();
+          return;
         }
 
-        const name = contactName.value.trim();
-        const email = contactEmail.value.trim();
-        const phone = contactPhone.value.trim();
-        const message = contactMessage.value.trim();
-
-        contactEmail.value = email;
-
-        if (name.length < 2 || name.length > 80) {
-            markInvalid(
-                contactName,
-                "Enter your name using between 2 and 80 characters."
-            );
+        // Netlify must host the site to receive Netlify form submissions.
+        if (
+          location.protocol === 'file:' ||
+          /^(localhost|127\.0\.0\.1)$/.test(location.hostname) ||
+          location.hostname.endsWith('github.io')
+        ) {
+          status.textContent =
+            'Your details are valid. Publish the site on Netlify and enable Forms before submitting.';
+          return;
         }
 
-        if (!email || !contactEmail.validity.valid) {
-            markInvalid(
-                contactEmail,
-                "Enter a valid email address, such as name@example.com."
-            );
+        const button = form.querySelector('button[type="submit"]');
+        button.disabled = true;
+        status.textContent = 'Sending your message...';
+
+        try {
+          const data = new URLSearchParams(new FormData(form));
+
+          const response = await fetch('/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: data.toString()
+          });
+
+          if (!response.ok) {
+            throw new Error('Form service returned an error.');
+          }
+
+          if (!location.hostname.endsWith('.netlify.app')) {
+            status.textContent =
+              'Your request was sent to the server. Confirm that it appears in your Netlify Forms dashboard.';
+          } else {
+            status.textContent =
+              'Form submitted. Please confirm it appears in the Netlify Forms dashboard.';
+            form.reset();
+          }
+
+        } catch (error) {
+          status.textContent =
+            'The message was not sent. Please check the hosting and form settings, then try again.';
+        } finally {
+          button.disabled = false;
         }
-
-        // Accept local and international South African formats.
-        const compactPhone = phone.replace(/[\s()-]/g, "");
-
-        if (phone && !/^(0\d{9}|\+27\d{9})$/.test(compactPhone)) {
-            markInvalid(
-                contactPhone,
-                "Enter 10 digits starting with 0, or +27 followed by 9 digits."
-            );
-        }
-
-        if (!contactType.value) {
-            markInvalid(contactType, "Choose a message type.");
-        }
-
-        if (message.length < 10 || message.length > 2000) {
-            markInvalid(
-                contactMessage,
-                "Write a message using between 10 and 2000 characters."
-            );
-        }
-
-        if (firstInvalidField) {
-            contactStatus.textContent =
-                "Please correct the highlighted fields.";
-            firstInvalidField.focus();
-            return;
-        }
-
-        // The recipient comes from the form action.
-        const recipient = contactForm
-            .getAttribute("action")
-            .replace(/^mailto:/i, "");
-
-        const subject =
-            "Isipho Donations: " + contactType.value;
-
-        const emailBody = [
-            "Name: " + name,
-            "Email: " + email,
-            "Phone: " + (phone || "Not supplied"),
-            "Message type: " + contactType.value,
-            "",
-            message
-        ].join("\n");
-
-        contactEmailLink.href =
-            "mailto:" + recipient +
-            "?subject=" + encodeURIComponent(subject) +
-            "&body=" + encodeURIComponent(emailBody);
-
-        contactEmailLink.hidden = false;
-
-        contactStatus.textContent =
-            "Your email is prepared. Select the link below, then send " +
-            "it from your email application. Nothing has been sent yet.";
+      });
     });
-}
+
+  // 9. Optional email app functionality
+  // Insert a real, verified email address before publishing.
+  const CONTACT_EMAIL = 'st10478370@rcconnect.edu.za';
+
+  const emailButton = document.querySelector('#email-message');
+
+  if (emailButton) {
+    emailButton.addEventListener('click', () => {
+      const form = document.querySelector('#contact-form');
+      const status = form.querySelector('.form-status');
+
+      if (!validateForm(form)) {
+        status.textContent = 'Please correct the form first.';
+        return;
+      }
+
+      if (!CONTACT_EMAIL) {
+        status.textContent =
+          'Email recipient not configured. Add the verified address to CONTACT_EMAIL in JS/script.js.';
+        return;
+      }
+
+      const name = form.elements.name.value.trim();
+      const email = form.elements.email.value.trim();
+      const type = form.elements.type.value;
+      const message = form.elements.message.value.trim();
+
+      const subject = encodeURIComponent(`Isipho Donations: ${type}`);
+      const body = encodeURIComponent(
+        `From: ${name}\nEmail: ${email}\nType: ${type}\n\n${message}`
+      );
+
+      location.href =
+        `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+
+      status.textContent =
+        'Your email app will open. You must press Send there to deliver the message.';
+    });
+  }
+
+});

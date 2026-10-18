@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After deployment, uncomment and use your real Netlify URL:
+# Sitemap: https://REPLACE-WITH-YOUR-SITE.netlify.app/sitemap.xml

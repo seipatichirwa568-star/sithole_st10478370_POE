@@ -1,67 +1,102 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Isipho Donations</title>
-    <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/style.css">
-<script src="JS/script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#103f42">
+<meta name="description" content="Browse a responsive photo gallery showing examples of food donations, giving and community support. Select any photo to enlarge it.">
+<title>Community Support Photo Gallery | Isipho Donations</title>
+<link rel="stylesheet" href="CSS/style.css">
+<meta name="keywords" content="charity gallery, community donation photographs, volunteers, food parcels">
 </head>
 <body>
-    <header>
-        <div class="logo">Isipho Donations</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about us.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact us.html">Contact Us</a>
-        </nav>
-    </header>
-    <main>
-        <section class="gallery-header">
-            <h1>Our Gallery</h1>
-            <p>
-                Welcome to our gallery. Take a look at some of our work,
-                services and experiences. We are proud to share these
-                moments with you.
-            </p>
-        </section>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html" aria-label="Isipho Donations home"><span class="brand-mark">✳</span><span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="sr-only">Toggle menu</span></button>
+<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about us.html">About</a>
+<a href="services.html">Services</a>
+<a aria-current="page" href="gallery.html">Gallery</a>
+<a href="enquiry.html">Get Involved</a>
+<a href="contact us.html">Contact</a>
+</nav>
+</div>
+</header>
 
-        <section class="gallery">
-            <div class="gallery-item">
-                <img src="https://th.bing.com/th/id/OIP.9A8agn8nFyq4zbn4plViMQHaFe?w=244&h=181&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Our business">
-                <div class="gallery-info">
-                    <h3>Our Business</h3>
-                    <p>Discover more about what we do and what we offer.</p>
-                </div>
-            </div>
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<span class="eyebrow">A LITTLE VISUAL STORY</span>
+<h1>Moments that <em>matter.</em></h1>
+<p>A picture can remind us how much difference a caring community can make.</p>
+</div>
+</section>
 
-            <div class="gallery-item">
-                <img src="https://th.bing.com/th/id/OIP.iZ2PVP7w-OYF4Sf78n3bRgHaEp?w=308&h=194&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Our services">
-                <div class="gallery-info">
-                    <h3>Our Services</h3>
-                    <p>Quality services designed to meet our customers' needs.</p>
-                </div>
-            </div>
+<section class="container section-pad">
+<div class="section-heading">
+<div>
+<span class="eyebrow dark">COMMUNITY GALLERY</span>
+<h2>Giving looks <em>good on everyone.</em></h2>
+</div>
+<p>Select an image to view it in a larger lightbox.</p>
+</div>
 
-            <div class="gallery-item">
-                <img src="https://th.bing.com/th/id/OIP.3fLi_n8dq7AlaUh5rRuAdwHaE7?w=290&h=193&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="Our team">
-                <div class="gallery-info">
-                    <h3>Our Team</h3>
-                    <p>Meet the people who help make our business successful.</p>
-                </div>
-            </div>
+<div class="gallery-grid">
+<button class="gallery-tile gallery-wide" type="button"
+data-image="images/community-food-parcels.webp"
+data-alt="Volunteers organising donated food parcels"
+data-caption="Food parcel preparations">
+<img src="images/community-food-parcels.webp" alt="Volunteers sorting items for food parcels" loading="lazy">
+<span>Food parcel preparations <b>↗</b></span>
+</button>
 
-            <div class="gallery-item">
-                <img src="images/donation 3.jpg" alt="Our work">
-                <div class="gallery-info">
-                    <h3>Our Work</h3>
-                    <p>A collection of some of the work we have completed.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+<button class="gallery-tile" type="button"
+data-image="images/volunteer-team.webp"
+data-alt="A team with boxes of donated goods"
+data-caption="A team effort">
+<img src="images/volunteer-team.webp" alt="Volunteer group holding cardboard donation boxes" loading="lazy">
+<span>A team effort <b>↗</b></span>
+</button>
+
+<button class="gallery-tile" type="button"
+data-image="images/community-gathering.webp"
+data-alt="Community members assembled outside"
+data-caption="Community spirit">
+<img src="images/community-gathering.webp" alt="Crowd gathered at a community support event" loading="lazy">
+<span>Community spirit <b>↗</b></span>
+</button>
+
+<button class="gallery-tile gallery-wide" type="button"
+data-image="images/volunteer-packing.webp"
+data-alt="Volunteers organising donated groceries"
+data-caption="Preparing donation boxes">
+<img src="images/volunteer-packing.webp" alt="Volunteers organising donated groceries" loading="lazy">
+<span>Preparing donation boxes <b>↗</b></span>
+</button>
+</div>
+
+<p class="small-note">Photographs supplied as part of the student project are illustrative. Ownership and permission to publish should be verified before public deployment.</p>
+</section>
+
+<dialog id="gallery-dialog" class="lightbox" aria-label="Enlarged gallery photograph">
+<button id="close-lightbox" class="lightbox-close" type="button" aria-label="Close enlarged photo">✕</button>
+<img id="lightbox-image" src="images/community-food-parcels.webp" alt="Donation food parcels">
+<p id="lightbox-caption"></p>
+</dialog>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">✳</span><span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span></a><p>A little kindness can go a long way.</p></div>
+<div><h2>Explore</h2><a href="about us.html">Our story</a><a href="services.html">What we do</a><a href="gallery.html">Gallery</a></div>
+<div><h2>Take part</h2><a href="enquiry.html">Enquire or volunteer</a><a href="contact us.html">Contact us</a><p>Pretoria, South Africa</p></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 Isipho Donations · Student portfolio project</span><span>Made with care, HTML, CSS &amp; JavaScript.</span></div>
+</footer>
+<script src="JS/script.js" defer></script>
 </body>
 </html>

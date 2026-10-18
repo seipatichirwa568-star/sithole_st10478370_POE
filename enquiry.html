@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#103f42">
+<meta name="description" content="Ask Isipho Donations about food, clothing, school supplies, volunteering or community partnerships using our enquiry form.">
+<title>Enquire About Donations, Volunteering & Support | Isipho Donations</title>
+<link rel="stylesheet" href="CSS/style.css">
+<meta name="keywords" content="donation enquiry, volunteer enquiry, community partnership, Isipho Donations">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html" aria-label="Isipho Donations home"><span class="brand-mark">✳</span><span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="sr-only">Toggle menu</span></button>
+<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about us.html">About</a>
+<a href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a aria-current="page" href="enquiry.html">Get Involved</a>
+<a href="contact us.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<span class="eyebrow">LET'S WORK TOGETHER</span>
+<h1>Good things begin<br>with <em>a question.</em></h1>
+<p>Want to donate, volunteer or collaborate? Tell us what you have in mind.</p>
+</div>
+</section>
+
+<section class="container section-pad form-layout">
+<div class="form-intro">
+<span class="eyebrow dark">ENQUIRY FORM</span>
+<h2>Tell us how you'd like to <em>help.</em></h2>
+<p>Choose an enquiry type and provide a few details. We will show a clear response before you submit the enquiry.</p>
+<div class="mini-note">
+<strong>What this form does</strong>
+<p>It validates your information, offers tailored guidance and can send an enquiry through Netlify Forms once the website is deployed there.</p>
+</div>
+</div>
+
+<div class="form-card">
+<form id="enquiry-form" name="enquiry" method="POST" action="/" data-netlify="true" data-netlify-honeypot="bot-field" novalidate>
+<input type="hidden" name="form-name" value="enquiry">
+<input type="hidden" name="bot-field">
+
+<div class="form-row">
+<div>
+<label for="enq-name">Full name <span>*</span></label>
+<input id="enq-name" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="Your full name">
+<small class="field-error" data-error-for="enq-name"></small>
+</div>
+<div>
+<label for="enq-email">Email <span>*</span></label>
+<input id="enq-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+<small class="field-error" data-error-for="enq-email"></small>
+</div>
+</div>
+
+<div class="form-row">
+<div>
+<label for="enq-phone">Phone (optional)</label>
+<input id="enq-phone" name="phone" type="tel" pattern="[+0-9() .-]{9,20}" placeholder="e.g. 012 345 6789">
+<small class="field-error" data-error-for="enq-phone"></small>
+</div>
+<div>
+<label for="enq-type">I'm interested in <span>*</span></label>
+<select id="enq-type" name="interest" required>
+<option value="">Choose an option</option>
+<option value="food">Donating food</option>
+<option value="clothes">Donating clothing</option>
+<option value="school">School supplies</option>
+<option value="volunteer">Volunteering</option>
+<option value="partner">Partnering with us</option>
+</select>
+<small class="field-error" data-error-for="enq-type"></small>
+</div>
+</div>
+
+<label for="enq-message">Tell us a little more <span>*</span></label>
+<textarea id="enq-message" name="message" required minlength="10" maxlength="800" rows="5" placeholder="What would you like to know or contribute?"></textarea>
+<small class="field-error" data-error-for="enq-message"></small>
+
+<div class="form-response" id="enquiry-preview" aria-live="polite">
+Select an enquiry type to see useful information here.
+</div>
+<button class="btn btn-coral full-btn" type="submit">Submit enquiry ↗</button>
+<p class="form-status" role="status" aria-live="polite"></p>
+<p class="small-note">This is a student website. Do not send sensitive personal information.</p>
+</form>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">✳</span><span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span></a><p>A little kindness can go a long way.</p></div>
+<div><h2>Explore</h2><a href="about us.html">Our story</a><a href="services.html">What we do</a><a href="gallery.html">Gallery</a></div>
+<div><h2>Take part</h2><a href="enquiry.html">Enquire or volunteer</a><a href="contact us.html">Contact us</a><p>Pretoria, South Africa</p></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 Isipho Donations · Student portfolio project</span><span>Made with care, HTML, CSS &amp; JavaScript.</span></div>
+</footer>
+<script src="JS/script.js" defer></script>
+</body>
+</html>

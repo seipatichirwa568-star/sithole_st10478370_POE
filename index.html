@@ -1,75 +1,190 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Isipho Donations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#103f42">
+    <meta name="description" content="Isipho Donations connects the spirit of giving with food, clothing and school supply support in South African communities.">
+    <title>Community Giving, Food & Volunteer Support | Isipho Donations</title>
     <link rel="stylesheet" href="CSS/style.css">
-    <link rel="stylesheet" href="CSS/style.css">
-<script src="JS/script.js" defer></script>
+<meta name="keywords" content="Isipho Donations, community giving, donation support, Pretoria, volunteering">
 </head>
 <body>
-    <header>
-        <div class="logo">Isipho Donations</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about us.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact us.html">Contact Us</a>
-        </nav>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html" aria-label="Isipho Donations home">
+                <span class="brand-mark">✳</span>
+                <span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="sr-only">Toggle menu</span></button>
+
+            <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+                <a aria-current="page" href="index.html">Home</a>
+                <a href="about us.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="enquiry.html">Get Involved</a>
+                <a href="contact us.html">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to Isipho Donations</h1>
-            <p>Making a difference in our community.</p>
+    <main id="main">
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-copy reveal">
+                    <span class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        SMALL ACTS. BIG DIFFERENCE.
+                    </span>
+
+                    <h1>
+                        Giving is good.<br>
+                        <em>Giving together</em><br>
+                        is powerful.
+                    </h1>
+
+                    <p>From food parcels to school essentials, every thoughtful act of giving can help a neighbour move forward.</p>
+
+                    <div class="button-row">
+                        <a class="btn btn-coral" href="enquiry.html">
+                            Be part of the change <span aria-hidden="true">↗</span>
+                        </a>
+                        <a class="text-link" href="about us.html">
+                            Get to know us <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+
+                    <div class="hero-caption">
+                        <span class="caption-symbol">♥</span>
+                        People helping people, one gift at a time.
+                    </div>
+                </div>
+
+                <div class="hero-art" aria-label="Collage of volunteers, donation parcels and community members">
+                    <span class="hero-halo" aria-hidden="true"></span>
+
+                    <figure class="float-photo photo-main">
+                        <img src="images/volunteer-packing.webp"
+                             alt="Volunteers sorting and packing food donations"
+                             fetchpriority="high">
+                    </figure>
+
+                    <figure class="float-photo photo-top">
+                        <img src="images/community-gathering.webp"
+                             alt="People gathered for a community donation event">
+                    </figure>
+
+                    <figure class="float-photo photo-bottom">
+                        <img src="images/volunteer-team.webp"
+                             alt="Volunteer group holding cardboard donation boxes">
+                    </figure>
+
+                    <div class="floating-note">
+                        ✦ <strong>Love in action</strong>
+                        <small>Every gift matters</small>
+                    </div>
+
+                    <span class="spark spark-one" aria-hidden="true">✳</span>
+                    <span class="spark spark-two" aria-hidden="true">✦</span>
+                </div>
+            </div>
+            <div class="hero-wave" aria-hidden="true"></div>
         </section>
 
-        <section class="about-section">
-            <img src="Images/isipho.jpg" alt="Isipho Donations Logo" width="600" height="300">
-            
-            <p>
-                Isipho Donations is a South African non-profit organisation
-                dedicated to improving the lives of disadvantaged individuals
-                and families.
-            </p>
+        <section class="container section-pad" aria-labelledby="impact-title">
+            <div class="section-heading reveal">
+                <div>
+                    <span class="eyebrow dark">OUR FOCUS</span>
+                    <h2 id="impact-title">Small gifts. <em>Real purpose.</em></h2>
+                </div>
+                <p>There is more than one way to make a difference. Here are some of the needs we hope to support.</p>
+            </div>
 
-            <p>
-                We work with communities, volunteers, schools, churches,
-                businesses, and donors to provide support to people in need.
-            </p>
+            <div class="cards three-col">
+                <article class="feature-card reveal">
+                    <span class="feature-icon coral-icon">✿</span>
+                    <h3>Food support</h3>
+                    <p>Helping connect donated food parcels with families who need a little extra support.</p>
+                    <a href="services.html">Explore services →</a>
+                </article>
+
+                <article class="feature-card reveal">
+                    <span class="feature-icon gold-icon">▤</span>
+                    <h3>School essentials</h3>
+                    <p>Giving learners stationery and supplies so they can focus on the next lesson.</p>
+                    <a href="services.html">Explore services →</a>
+                </article>
+
+                <article class="feature-card reveal">
+                    <span class="feature-icon green-icon">♡</span>
+                    <h3>Community care</h3>
+                    <p>Encouraging neighbours, volunteers and local partners to work together.</p>
+                    <a href="enquiry.html">Get involved →</a>
+                </article>
+            </div>
         </section>
 
-        <section class="mission-vision">
-            <h2>Our Mission</h2>
-            <p>
-                Our mission is to improve lives by connecting donors with
-                communities in need through transparent, reliable, and
-                compassionate charitable services.
-            </p>
+        <section class="story-band">
+            <div class="container story-grid">
+                <div class="story-photo reveal">
+                    <img src="images/volunteer-team.webp"
+                         alt="Volunteer team holding donation boxes"
+                         loading="lazy">
+                    <span class="photo-sticker">Made for<br>community ♥</span>
+                </div>
 
-            <h2>Our Vision</h2>
-            <p>
-                Our vision is to create stronger communities where everyone
-                has access to basic necessities and opportunities for a better life.
-            </p>
+                <div class="reveal">
+                    <span class="eyebrow dark">THE HEART BEHIND ISIPHO</span>
+                    <h2>Kindness doesn't have to be <em>complicated.</em></h2>
+                    <p>We believe giving starts when somebody notices a need and decides to help. Isipho Donations is a student-developed website concept centred on practical community support.</p>
+                    <a href="about us.html" class="btn btn-teal">Read our story →</a>
+                </div>
+            </div>
         </section>
 
-        <section class="values">
-            <h2>Our Values</h2>
-            <ul>
-                <li>Compassion</li>
-                <li>Integrity</li>
-                <li>Collaboration</li>
-                <li>Empowerment</li>
-                <li>Accountability</li>
-            </ul>
+        <section class="container section-pad cta-section reveal">
+            <div>
+                <span class="eyebrow">READY TO MAKE A DIFFERENCE?</span>
+                <h2>There's room for <em>your kindness.</em></h2>
+                <p>Ask about donations, partnerships or becoming a volunteer.</p>
+            </div>
+            <a href="enquiry.html" class="btn btn-light">Let's make it happen ↗</a>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Isipho Donations. All rights reserved.</p>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div>
+                <a class="brand footer-brand" href="index.html">
+                    <span class="brand-mark">✳</span>
+                    <span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span>
+                </a>
+                <p>A little kindness can go a long way.</p>
+            </div>
+            <div>
+                <h2>Explore</h2>
+                <a href="about us.html">Our story</a>
+                <a href="services.html">What we do</a>
+                <a href="gallery.html">Gallery</a>
+            </div>
+            <div>
+                <h2>Take part</h2>
+                <a href="enquiry.html">Enquire or volunteer</a>
+                <a href="contact us.html">Contact us</a>
+                <p>Pretoria, South Africa</p>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <span>© 2026 Isipho Donations · Student portfolio project</span>
+            <span>Made with care, HTML, CSS &amp; JavaScript.</span>
+        </div>
     </footer>
+
+    <script src="JS/script.js" defer></script>
 </body>
 </html>

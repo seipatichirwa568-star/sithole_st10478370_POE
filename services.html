@@ -1,97 +1,88 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Community Support Services | Isipho Donations</title>
-    <meta name="description"
-          content="Explore food donations, clothing donations, school supplies and community support offered by Isipho Donations.">
-
-    <!-- External styles and JavaScript -->
-    <link rel="stylesheet" href="CSS/style.css">
-    <script src="JS/script.js" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#103f42">
+<meta name="description" content="Explore searchable food donations, clothing donations, school supplies and volunteer support with Isipho Donations.">
+<title>Donation Services & Community Support | Isipho Donations</title>
+<link rel="stylesheet" href="CSS/style.css">
+<meta name="keywords" content="donation services, food parcels, school supplies, volunteering, Pretoria">
 </head>
-
 <body>
-    <header>
-        <div class="logo">Isipho Donations</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<div class="container nav-wrap">
+<a class="brand" href="index.html" aria-label="Isipho Donations home"><span class="brand-mark">✳</span><span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span></a>
+<button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">☰ <span class="sr-only">Toggle menu</span></button>
+<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about us.html">About</a>
+<a aria-current="page" href="services.html">Services</a>
+<a href="gallery.html">Gallery</a>
+<a href="enquiry.html">Get Involved</a>
+<a href="contact us.html">Contact</a>
+</nav>
+</div>
+</header>
 
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home</a>
-            <a href="about us.html">About Us</a>
-            <a href="services.html" aria-current="page">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact us.html">Contact Us</a>
-        </nav>
-    </header>
+<main id="main">
+<section class="page-hero">
+<div class="container">
+<span class="eyebrow">HOW WE CAN HELP</span>
+<h1>Every kind act<br><em>counts.</em></h1>
+<p>Explore the different ways the Isipho Donations concept supports communities.</p>
+</div>
+</section>
 
-    <main>
-        <section class="page-intro">
-            <h1>Our Services</h1>
-            <p>Discover how we help the community.</p>
-        </section>
+<section class="container section-pad">
+<div class="section-heading">
+<div>
+<span class="eyebrow dark">FIND YOUR INTEREST</span>
+<h2>Explore our <em>services.</em></h2>
+</div>
+<p>Search or sort below. These cards are created from JavaScript data, not hard-coded into the page.</p>
+</div>
 
-        <section class="services-overview">
-            <h2>Support We Offer</h2>
-            <p>
-                Isipho Donations provides different forms of assistance
-                to disadvantaged individuals and families.
-            </p>
+<div class="service-controls">
+<label for="service-search">Search services
+<input id="service-search" type="search" placeholder="Try food, clothes, school..." autocomplete="off">
+</label>
+<label for="service-sort">Sort services
+<select id="service-sort">
+<option value="default">Recommended</option>
+<option value="az">Name A–Z</option>
+<option value="za">Name Z–A</option>
+</select>
+</label>
+</div>
 
-            <!-- Visitors can search and change the order of the cards -->
-            <div class="service-controls">
-                <div>
-                    <label for="service-search">Search services</label>
-                    <input type="search"
-                           id="service-search"
-                           placeholder="Try food, clothing or school">
-                </div>
+<p id="service-count" class="result-count" role="status" aria-live="polite"></p>
+<div id="services-grid" class="cards three-col" aria-label="Available community support services"></div>
+<noscript><p>Please enable JavaScript to see the searchable list of community services.</p></noscript>
+</section>
 
-                <div>
-                    <label for="service-sort">Sort services</label>
-                    <select id="service-sort">
-                        <option value="default">Original order</option>
-                        <option value="az">Name: A–Z</option>
-                        <option value="za">Name: Z–A</option>
-                    </select>
-                </div>
+<section class="story-band">
+<div class="container simple-cta">
+<div>
+<span class="eyebrow dark">NOT SURE WHERE TO START?</span>
+<h2>Ask us about <em>getting involved.</em></h2>
+<p>Enquire about volunteering, donations or partnership ideas.</p>
+</div>
+<a class="btn btn-teal" href="enquiry.html">Send an enquiry ↗</a>
+</div>
+</section>
+</main>
 
-                <button id="service-reset" type="button">
-                    Reset
-                </button>
-            </div>
-
-            <p id="service-results" role="status" aria-live="polite"></p>
-
-            <!-- JavaScript creates the service cards here -->
-            <div id="service-list" class="service-list"></div>
-
-            <noscript>
-                <p>
-                    Our services include food donations, clothing donations,
-                    school supplies, community support and donation collection.
-                    Enable JavaScript to search and sort the services.
-                </p>
-            </noscript>
-        </section>
-
-        <section class="how-to-help">
-            <h2>How You Can Help</h2>
-            <ol>
-                <li>Donate food or clothing.</li>
-                <li>Donate school supplies.</li>
-                <li>Volunteer your time.</li>
-                <li>Support community projects.</li>
-                <li>Tell others about Isipho Donations.</li>
-            </ol>
-
-            <a href="contact us.html">Contact us about getting involved</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Isipho Donations. All rights reserved.</p>
-    </footer>
+<footer class="site-footer">
+<div class="container footer-grid">
+<div><a class="brand footer-brand" href="index.html"><span class="brand-mark">✳</span><span>isipho<span class="brand-dot">.</span><small>DONATIONS</small></span></a><p>A little kindness can go a long way.</p></div>
+<div><h2>Explore</h2><a href="about us.html">Our story</a><a href="services.html">What we do</a><a href="gallery.html">Gallery</a></div>
+<div><h2>Take part</h2><a href="enquiry.html">Enquire or volunteer</a><a href="contact us.html">Contact us</a><p>Pretoria, South Africa</p></div>
+</div>
+<div class="container footer-bottom"><span>© 2026 Isipho Donations · Student portfolio project</span><span>Made with care, HTML, CSS &amp; JavaScript.</span></div>
+</footer>
+<script src="JS/script.js" defer></script>
 </body>
 </html>
