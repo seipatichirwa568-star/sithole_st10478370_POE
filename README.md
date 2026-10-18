@@ -1,157 +1,463 @@
 # Isipho Donations | WEDE5020 Part 3 POE
 
-**Website concept:** Community support and donations, based around Pretoria, South Africa  
 **Student:** Letlhogonolo Sithole  
 **Module:** Web Development (Introduction) – WEDE5020  
-**Project stage:** Part 3 – functionality, SEO and feedback improvements  
-**Important:** This is a student website concept. The photographs illustrate community giving; they should not be treated as proof of an operating charity or a verified event organised by Isipho Donations.
+**Project:** Isipho Donations – Community Giving Website  
+**Project stage:** Part 3 – JavaScript Functionality, SEO and Deployment  
+**Last updated:** 18 October 2026
 
-## About the project
+**Live website:** https://illustrious-douhua-00713d.netlify.app/
 
-I developed this six-page website to explain the idea of Isipho Donations and give visitors a way to explore community support, find donation information and enquire about taking part. I kept the Part 2 design concept, but updated the structure, colours and functionality using HTML, external CSS and external JavaScript.
+**GitHub repository:** https://github.com/seipatichirwa568-star/sithole_st10478370_POE
 
-## Website pages
+**Deployment branch:** `master`
 
-| Page | Filename | Purpose |
+> **Project note:** Isipho Donations is a student-developed non-profit website concept based around Pretoria, South Africa. The images illustrate community giving and should not be treated as evidence of an operating charity or verified events.
+
+---
+
+## 1. Project Overview
+
+Isipho Donations is a six-page website created to present the concept of a community-support organisation in South Africa.
+
+The website focuses on helping communities through donations of food, clothing, school supplies and opportunities for volunteering.
+
+For Part 3, I focused on improving the website based on the lecturer's feedback from Part 2, where I received 77%.
+
+The changes included improving the layout, fixing the navigation menu, introducing JavaScript functionality, adding form validation, improving SEO and deploying the website through Netlify.
+
+The website was developed using HTML5, external CSS and external JavaScript.
+
+## 2. Website Pages
+
+| Webpage | File Name | Description |
 |---|---|---|
-| Home | `index.html` | Introducing Isipho, floating photos, featured donation areas |
-| About Us | `about us.html` | The organisation concept, mission, values and FAQ |
-| Services | `services.html` | Dynamic service cards with search and sorting |
-| Gallery | `gallery.html` | Responsive photographs and click-to-enlarge lightbox |
-| Enquiry | `enquiry.html` | A form for donation, partnership or volunteering questions |
-| Contact Us | `contact us.html` | General message form, optional email-app link and interactive Pretoria map |
+| Home | `index.html` | Introduces Isipho Donations with floating photographs, animated elements and community-support information. |
+| About Us | `about us.html` | Explains the organisation concept, mission, vision, values and frequently asked questions. |
+| Services | `services.html` | Displays donation services using JavaScript-generated cards, search and sorting features. |
+| Gallery | `gallery.html` | Displays donation-related images with an interactive lightbox. |
+| Enquiry | `enquiry.html` | Allows visitors to enquire about donations, volunteering and partnerships. |
+| Contact Us | `contact us.html` | Contains a general contact form and an interactive map of Pretoria. |
 
-The spaces in **`about us.html`** and **`contact us.html`** are intentional and have been preserved as requested. The corresponding deployed URLs may display `%20` instead of spaces.
+The original filenames `about us.html` and `contact us.html` were retained. Their published URLs may show `%20` instead of spaces.
 
-## Project structure
+## 3. Technologies Used
+
+### HTML5
+
+HTML was used to create the structure of the website, including navigation menus, sections, headings, images, buttons and forms.
+
+### CSS3
+
+An external CSS stylesheet was used to provide consistent colours, typography, spacing, layout and responsive designs across the website.
+
+CSS animations and transitions were used to create floating photographs, interactive buttons and smooth visual effects.
+
+Responsive layouts were developed using media queries (MDN Web Docs, s.a.-a).
+
+### JavaScript
+
+JavaScript was added to improve user interaction, including:
+
+- Responsive navigation.
+- Gallery lightbox functionality.
+- Dynamic service listings.
+- Service search and sorting.
+- Form validation.
+- Error and submission feedback.
+- Scroll animations.
+- Interactive map integration.
+
+JavaScript functionality was developed using DOM manipulation and event handling (MDN Web Docs, s.a.-b).
+
+### Leaflet and OpenStreetMap
+
+Leaflet was used to provide an interactive map showing the Pretoria area.
+
+The map is included for demonstration purposes and does not represent a confirmed Isipho Donations office (Leaflet, s.a.).
+
+### GitHub
+
+GitHub was used to store the project files, maintain version control and record development changes.
+
+### Netlify
+
+Netlify was used to deploy the website and process submissions from the Contact and Enquiry forms (Netlify, s.a.).
+
+## 4. Project Structure
 
 ```text
-Isipho_Donations_Part3/
+My Business Proposal/
+│
 ├── index.html
 ├── about us.html
 ├── services.html
 ├── gallery.html
 ├── enquiry.html
 ├── contact us.html
-├── CSS/style.css
-├── JS/script.js
-├── images/ (six optimised WebP photographs)
+│
+├── CSS/
+│   └── style.css
+│
+├── JS/
+│   └── script.js
+│
+├── images/
+│   └── Donation and community images
+│
+├── README.md
 ├── robots.txt
-├── sitemap.xml
-└── README.md
+└── sitemap.xml
 ```
 
-## Part 2 feedback and fixes
+All required files must be correctly linked, and folder capitalisation must match the paths used in the HTML pages.
 
-I received **77/100** for Part 2. The lecturer's feedback guided these corrections:
+## 5. Part 2 Feedback and Improvements
 
-| Feedback | Previous mark | What was corrected |
+My final mark for Formative 2 Part 2 was **77/100**.
+
+After reviewing the lecturer's comments, I identified the areas that needed improvement before proceeding with Part 3.
+
+| Assessment Criterion | Part 2 Mark | Improvements Made |
 |---|---:|---|
-| Updates based on Part 1 feedback | 7/10 | Explained the changes and recorded them in the changelog |
-| Desktop layout structure | 2/5 | Restored complete external CSS; corrected grids, spacing and alignment |
-| Decoration and colour | 4/5 | Consistent teal, coral and warm cream colours, improved cards and hover effects |
-| Responsive layout | 4/5 | Tablet/mobile CSS breakpoints and flexible containers |
-| Responsive typography | 4/5 | Responsive headings with CSS `clamp()` |
-| Mobile navigation | 2/5 | Collapsible menu with an accessible button and matching links |
-| Responsive images | 4/5 | Renamed and optimised images, flexible image sizing and gallery paths |
-| GitHub descriptive commits | 2/5 | Clear plan for committing actual updates in stages; see below |
-| README | 4/5 | Added project description, pages, installation, testing and references |
-| Changelog | 2/5 | Recorded specific file-level changes and areas still needing work |
-| References | 2/5 | Added author-date in-text citations and a consistent Harvard–Anglia reference list |
+| Feedback from Part 1 | 7/10 | Expanded the changelog and documented the improvements. |
+| CSS Layout Structure | 2/5 | Corrected CSS layout problems, spacing, alignment and page structure. |
+| Decoration and Colour | 4/5 | Introduced a consistent teal, coral and warm-cream colour scheme. |
+| Responsive Layout | 4/5 | Improved the layout across desktop, tablet and mobile screens. |
+| Responsive Typography | 4/5 | Improved heading sizes and text responsiveness. |
+| Navigation Menu | 2/5 | Added a JavaScript-powered responsive navigation menu. |
+| Responsive Images | 4/5 | Corrected image paths and improved image responsiveness. |
+| GitHub Commits | 2/5 | Improved commit descriptions for subsequent development changes. |
+| README Documentation | 4/5 | Expanded the project description and technical documentation. |
+| Changelog | 2/5 | Added detailed records of changes made during development. |
+| References | 2/5 | Updated in-text citations and references using IIE Harvard–Anglia style. |
 
-The stylesheet, typography, pseudo-classes and responsive breakpoint setup build on earlier work rather than replacing the website with an unrelated project (MDN Web Docs, s.a.-a).
+### Strengths Retained from Part 2
 
-## Part 3 features
+The following areas received full marks and were retained during development:
 
-### JavaScript and user interaction
+- External CSS stylesheet: 10/10.
+- CSS default styling: 5/5.
+- Typography: 5/5.
+- CSS pseudo-classes: 10/10.
+- Media queries and breakpoints: 10/10.
 
-- **Mobile navigation:** the ☰ button opens and closes the menu at small screen sizes.
-- **Gallery lightbox:** selecting an image opens an enlarged photo in a `<dialog>` element. Close with the X button or Escape key.
-- **Dynamic services:** service cards are created in JavaScript. The visitor can search and sort them (MDN Web Docs, s.a.-b).
-- **Reveal animations and floating images:** CSS animation and JavaScript intersection observation help add movement without making essential content depend on animation.
-- **Interactive map:** the contact page uses Leaflet and OpenStreetMap to show central Pretoria. This is an illustrative map, not a verified office (Leaflet, s.a.).
+The goal was to improve the weaker areas without removing features that already worked correctly.
 
-### Forms and validation
+## 6. Part 3 JavaScript Functionality
 
-- The **enquiry form** asks about food, clothing, school supplies, volunteering or partnership requests and displays guidance related to the selected topic.
-- The **contact form** is for general messages. It asks for contact details, message type and message content.
-- Both forms use HTML form controls and JavaScript validation for required values, email format, length and optional phone format (MDN Web Docs, s.a.-c).
-- Both are prepared for **AJAX submission using Netlify Forms**. Form submissions must be tested on a live Netlify deployment. They **will not send** when using local VS Code Live Server (Netlify, s.a.-a).
-- The optional Contact email-app button needs a recipient address the owner is authorised to use. Opening an email application does not send the email automatically.
+### 6.1 Responsive Navigation
 
-### SEO and performance
+The website uses JavaScript to control its mobile navigation menu.
 
-Each page has a unique page title, description, relevant keywords, semantic headings and internal links. Image files have descriptive names and alternative text. Photos are saved as WebP to keep downloads small, and images below the first screen use lazy loading. The site includes `robots.txt` and a draft `sitemap.xml`. These files must be updated with the real deployment address (Google Search Central, s.a.).
+On smaller screens, visitors can select the menu button to display or hide the navigation links.
 
-**Off-page SEO still requires actual publication and outreach.** The site has not been promoted or linked from other websites as part of this code package. Only claim social promotion or backlinks after completing that work.
+This allows users to navigate between the six webpages.
 
-## Changelog
+### 6.2 Floating Images and Animations
 
-### Part 1 – initial HTML site
+The homepage contains animated photographs that create a floating effect.
 
-- Built Home, About Us, Services, Gallery and Contact pages.
-- Added introductory content and donation-related imagery.
+These animations were implemented using CSS keyframes and transitions.
 
-### Part 2 – CSS and responsive design
+Scroll animations were also introduced to improve how content appears as visitors move through the website.
 
-- Linked the same external stylesheet across pages.
-- Developed typography, navigation, card layouts and media queries.
-- Reviewed lecturer feedback after receiving 77/100.
+### 6.3 Interactive Gallery Lightbox
 
-### Part 3 – 18 October 2026: functionality and layout review
+The gallery includes an interactive lightbox.
 
-- **`CSS/style.css`:** fixed a truncated stylesheet that had stopped partway through a floating-photo rule, restored full layout styles and improved contact alignment and phone navigation.
-- **`about us.html`:** replaced the accidental duplicate Contact page with the actual About Us page, its mission/vision/values and an FAQ accordion.
-- **`contact us.html`:** replaced the older layout with the redesigned centred Contact page, six-page navigation, a general-message form and a Leaflet map.
-- **All HTML pages:** corrected links for the real file names `about us.html` and `contact us.html`, including footer links.
-- **`gallery.html`:** aligned each image's `src` and `data-image` so the image displayed in the lightbox matches the thumbnail.
-- **`images/`:** created descriptively named WebP versions of selected supplied photos; left out an image with a visible stock watermark and an unrelated placeholder photograph.
-- **`index.html`:** updated floating photographs and image references.
-- **`services.html`:** retained dynamic JavaScript-generated cards and search/sort controls.
-- **`enquiry.html` and `contact us.html`:** added Netlify honeypot fields and kept JavaScript validation.
-- **`JS/script.js`:** retained the dynamic features and made submission messages clearer about needing Netlify verification.
-- **SEO files:** corrected the proposed sitemap paths and documented the real-domain replacement step.
-- **README:** updated the project structure, development record, rubric evidence and reference list.
+When a visitor selects a photograph, JavaScript displays the image in a larger view.
 
-### Remaining tasks (to be completed honestly, not marked as finished yet)
+The lightbox can be closed using the close button or the Escape key.
 
-- Test the completed pages and interactive elements in a browser at desktop and mobile widths.
-- Verify that you have permission to republish the supplied photos.
-- Deploy the site to Netlify; turn on Netlify Forms and confirm messages reach the dashboard.
-- Replace the placeholder domain in `sitemap.xml`, and uncomment/add the sitemap line in `robots.txt`.
-- Verify the recipient email address and any claims about real community programmes.
-- Make meaningful commits for your remaining actual edits, push to your existing **master** branch, and submit both the repository and deployed-site links required by the lecturer.
+### 6.4 Dynamic Content and Search
 
-## Running the project
+The Services page displays service information generated through JavaScript.
 
-1. Copy the updated files **into the root of your existing Git repository**. Do not create an extra subfolder for the website.
-2. Open that folder in VS Code.
-3. Right-click `index.html` and open with Live Server.
-4. Visit all six pages. Test their links and page responsiveness.
-5. Test gallery enlargement, services search/sort, mobile navigation, forms and the Pretoria map.
-6. Press **F12 → Console** and correct any JavaScript or missing-file errors.
-7. Deploy the root website directory to Netlify. Configure Forms and verify real submissions.
-8. Replace placeholder URLs in the SEO files before making your final commits.
+Visitors can:
 
-### Suggested descriptive commits (only after each related change is actually made)
+- Search for donation-related services.
+- Filter displayed content using keywords.
+- Sort services alphabetically.
+- Navigate to the Enquiry page.
+
+The purpose of this feature is to help visitors find information without manually scrolling through every service.
+
+### 6.5 Interactive Map
+
+The Contact Us page includes an interactive map developed using Leaflet and OpenStreetMap.
+
+Visitors can zoom and explore the Pretoria area.
+
+The location is illustrative and does not indicate an actual Isipho Donations office.
+
+## 7. Form Functionality and Validation
+
+Two separate forms were implemented to meet the requirements of Part 3.
+
+### 7.1 Enquiry Form
+
+The Enquiry form allows visitors to ask questions about:
+
+- Food donations.
+- Clothing donations.
+- School supplies.
+- Volunteering.
+- Partnerships.
+
+The form collects relevant contact information and provides guidance based on the selected enquiry type.
+
+### 7.2 Contact Form
+
+The Contact form allows visitors to submit general messages, questions and feedback.
+
+It includes fields for:
+
+- Full name.
+- Email address.
+- Message type.
+- Message content.
+
+### 7.3 JavaScript Validation
+
+Both forms use HTML5 and JavaScript validation.
+
+The validation checks required fields, email formats and text lengths. Appropriate error messages are displayed when information is missing or invalid.
+
+These checks improve the user experience before submission (MDN Web Docs, s.a.-c).
+
+### 7.4 AJAX Form Submission
+
+The forms use JavaScript's `fetch()` function to submit information asynchronously.
+
+The data is processed through Netlify Forms, which stores received submissions in the project's dashboard.
+
+This functionality allows visitors to submit information without needing a separate custom server (Netlify, s.a.).
+
+## 8. Search Engine Optimisation (SEO)
+
+SEO improvements were introduced to make the website easier for search engines and visitors to understand.
+
+### On-Page SEO
+
+The following improvements were implemented:
+
+- Descriptive HTML page titles.
+- Relevant meta descriptions.
+- Proper heading structure.
+- Image alternative text.
+- Internal links between webpages.
+- Mobile-friendly page layouts.
+- Clear content about donations and community support.
+
+These improvements were guided by Google Search Central (s.a.).
+
+### Image Optimisation
+
+Selected images were prepared in WebP format to reduce file size and improve loading performance.
+
+Responsive image styling was also used to help photographs adapt to different screen sizes.
+
+### Additional SEO Files
+
+The website includes:
+
+- `robots.txt` – provides instructions to search engine crawlers.
+- `sitemap.xml` – lists website pages to help search engines discover them.
+
+The final published sitemap should use the current Netlify website address.
+
+### SEO Verification
+
+Before final submission, the live sitemap, robots file, page-specific keywords and meta descriptions should be checked against the rubric.
+
+## 9. Website Deployment
+
+The Isipho Donations website was successfully deployed using Netlify on **18 October 2026**.
+
+The deployment was connected to the GitHub repository using the `master` branch.
+
+### Live Website
+
+https://illustrious-douhua-00713d.netlify.app/
+
+### GitHub Repository
+
+https://github.com/seipatichirwa568-star/sithole_st10478370_POE
+
+**Note to lecturer:** The updated Part 3 project is deployed from the `master` branch. Please select `master` in GitHub if the repository opens on another branch.
+
+### Netlify Deployment
+
+The deployment process included:
+
+1. Connecting the GitHub repository to Netlify.
+2. Selecting the `master` branch.
+3. Configuring the website publishing directory.
+4. Publishing the website.
+5. Enabling Netlify form detection.
+6. Redeploying the website.
+7. Testing live form submissions.
+
+## 10. Functionality Testing
+
+The following tests and checks were recorded during Part 3 development.
+
+| Feature | Testing Result |
+|---|---|
+| Website Deployment | Published successfully through Netlify. |
+| Homepage | Displayed the redesigned layout and floating photographs. |
+| Navigation | Implemented across all six pages. |
+| Gallery Lightbox | Implemented and tested locally. |
+| Services Search | Implemented and tested locally. |
+| Responsive Design | Updated using CSS media queries. |
+| Interactive Map | Implemented using Leaflet. |
+| Contact Form | Test submission successfully received by Netlify. |
+| Enquiry Form | Test submission successfully received by Netlify. |
+| Form Submission Feedback | Enquiry page displayed a submission confirmation. |
+| Netlify Form Detection | Both forms successfully detected. |
+| SEO Files | Included; final live URL verification required. |
+
+### Form Submission Results
+
+During testing on 18 October 2026:
+
+**Contact Form**
+
+A test message was submitted through the published website and successfully appeared in the Netlify Forms dashboard.
+
+**Enquiry Form**
+
+A test enquiry was submitted through the live website and appeared under Verified submissions in the Netlify dashboard.
+
+The enquiry page also displayed a confirmation message after submission.
+
+These results confirm that Netlify received the test submissions. Further browser testing is recommended for different screen sizes and invalid input combinations.
+
+## 11. Changelog
+
+### Version 1.0 – Part 1: Initial Development
+
+- Created the basic website using HTML.
+- Developed the Home, About Us, Services, Gallery and Contact pages.
+- Added navigation links.
+- Included community-support information and images.
+- Created the initial project documentation.
+
+### Version 2.0 – Part 2: CSS Styling
+
+- Implemented an external CSS stylesheet.
+- Added typography styles, colours, margins and padding.
+- Used CSS pseudo-classes for interactive elements.
+- Added media queries for responsive layouts.
+- Improved the appearance of the navigation menu.
+- Received 77/100 and reviewed the lecturer's feedback.
+
+### Version 3.0 – Part 3: Website Improvements
+
+**Date: 18 October 2026**
+
+**Layout and Styling**
+
+- Corrected incomplete CSS.
+- Redesigned the homepage with floating photographs.
+- Improved colours and visual consistency.
+- Corrected spacing and alignment.
+- Redesigned and centred the Contact Us page.
+- Improved mobile responsiveness.
+
+**Navigation**
+
+- Corrected broken page links.
+- Retained the original About Us and Contact Us filenames.
+- Added responsive navigation functionality.
+- Improved the appearance of navigation links.
+
+**JavaScript**
+
+- Added mobile navigation functionality.
+- Implemented dynamic service listings.
+- Added search and sorting functionality.
+- Implemented the gallery lightbox.
+- Added scrolling animations.
+- Integrated the interactive map.
+
+**Forms**
+
+- Created a separate Enquiry form.
+- Improved the Contact form.
+- Added JavaScript validation.
+- Added error messages.
+- Implemented AJAX form submission.
+- Connected both forms to Netlify Forms.
+
+**SEO**
+
+- Improved webpage titles and descriptions.
+- Added image alternative text.
+- Improved internal navigation links.
+- Added robots.txt and sitemap.xml.
+- Improved selected image file formats.
+
+**Documentation**
+
+- Expanded the README.
+- Recorded corrections based on Part 2 feedback.
+- Added testing information.
+- Updated the reference list.
+- Added the live website link.
+
+### Version 3.1 – Deployment and Testing
+
+**Date: 18 October 2026**
+
+- Connected the website to Netlify.
+- Published the project from GitHub's `master` branch.
+- Enabled automatic form detection.
+- Redeployed the website.
+- Confirmed successful Contact form submission.
+- Confirmed successful Enquiry form submission.
+- Recorded the final outstanding checks.
+
+This changelog documents the website's development. The actual commit history remains available in the GitHub repository.
+
+## 12. Running the Website Locally
+
+To run the website:
+
+1. Open the project folder in Visual Studio Code.
+2. Ensure that the HTML, CSS, JavaScript and image files are in the correct directories.
+3. Install the Live Server extension if necessary.
+4. Right-click `index.html`.
+5. Select **Open with Live Server**.
+6. Use the navigation menu to access the other pages.
+7. Test the interactive features and responsiveness.
+
+To upload changes to GitHub, use the following commands in the VS Code terminal:
 
 ```bash
 git status
-git add index.html "about us.html" "contact us.html" gallery.html images/ CSS/style.css
-git commit -m "Fix page navigation layout and gallery images"
-
-git add services.html enquiry.html JS/script.js
-git commit -m "Improve Part 3 search and form interactions"
-
-git add README.md robots.txt sitemap.xml
-git commit -m "Document feedback changes and SEO setup"
-
+git add .
+git commit -m "Finalise Part 3 website and documentation"
 git push origin master
 ```
 
-Do not invent or rewrite a historical Git commit record. New commits only document work made now.
+Only create a new commit when actual changes have been made.
 
-## References (IIE Harvard–Anglia style)
+## 13. Outstanding Final Checks
+
+Before the final assessment, the following items should be verified:
+
+- Confirm that all six pages work on mobile and desktop.
+- Check that the interactive map loads on the published website.
+- Confirm that the sitemap and robots file contain the correct live website address.
+- Review page keywords, titles and meta descriptions against the rubric.
+- Check that form validation and submission feedback work correctly.
+- Verify permission to publish the photographs and add image attribution where needed.
+- Configure a verified email recipient if the optional email-app feature is used.
+- Confirm that the final changes are available on GitHub's `master` branch.
+
+## 14. References
 
 Google Search Central, s.a. *SEO starter guide*. [online] Available at: <https://developers.google.com/search/docs/fundamentals/seo-starter-guide> [Accessed 18 October 2026].
 
@@ -161,8 +467,14 @@ MDN Web Docs, s.a.-a. *Media query fundamentals*. [online] Available at: <https:
 
 MDN Web Docs, s.a.-b. *JavaScript guide*. [online] Available at: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide> [Accessed 18 October 2026].
 
-MDN Web Docs, s.a.-c. *Client-side form validation*. [online] Available at: <https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation> [Accessed 18 October 2026].
+MDN Web Docs, s.a.-c. *Using HTML form validation and the constraint validation API*. [online] Available at: <https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Constraint_validation> [Accessed 18 October 2026].
 
-Netlify, s.a.-a. *Forms setup*. [online] Available at: <https://docs.netlify.com/manage/forms/setup/> [Accessed 18 October 2026].
+Netlify, s.a. *Forms setup*. [online] Available at: <https://docs.netlify.com/manage/forms/setup/> [Accessed 18 October 2026].
 
-For image attribution, add original photographer/source and licence details after permission has been verified. Do not make up a citation for photos you cannot attribute.
+OpenStreetMap, s.a. *OpenStreetMap*. [online] Available at: <https://www.openstreetmap.org/> [Accessed 18 October 2026].
+
+**Image attribution note:** Photographs originally supplied with the student website must be checked for their sources and publishing permissions. Original photographers or licence details should be included where required. Unverified photo citations have not been invented.
+
+---
+
+*End of README – Isipho Donations WEDE5020 Part 3 POE*
