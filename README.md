@@ -1,5 +1,4 @@
 # Isipho Donations | WEDE5020 Part 3 POE
-
 **Student:** Letlhogonolo Sithole  
 **Module:** Web Development (Introduction) – WEDE5020  
 **Project:** Isipho Donations – Community Giving Website  
@@ -225,6 +224,11 @@ Both forms use HTML5 and JavaScript validation.
 The validation checks required fields, email formats and text lengths. Appropriate error messages are displayed when information is missing or invalid.
 
 These checks improve the user experience before submission (MDN Web Docs, s.a.-c).
+
+I used the WEDE5020 JavaScript Form Validation lecture material
+to improve input checking, error messages and live validation
+on the Contact and Enquiry forms (The IIE, 2026).
+
 
 ### 7.4 AJAX Form Submission
 
@@ -481,6 +485,11 @@ MDN Web Docs, s.a.-c. *Using HTML form validation and the constraint validation 
 Netlify, s.a. *Forms setup*. [online] Available at: <https://docs.netlify.com/manage/forms/setup/> [Accessed 18 October 2026].
 
 OpenStreetMap, s.a. *OpenStreetMap*. [online] Available at: <https://www.openstreetmap.org/> [Accessed 18 October 2026].
+
+The Independent Institute of Education (The IIE). 2026.
+JavaScript Form Validation: WEDE5020 Web Development.
+Unpublished lecture slides.
+
 
 **Image attribution note:** Photographs originally supplied with the student website must be checked for their sources and publishing permissions. Original photographers or licence details should be included where required. Unverified photo citations have not been invented.
 
