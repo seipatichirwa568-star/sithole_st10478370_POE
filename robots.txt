@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
-Sitemap:https://illustrious-douhua-00713d.netlify.app 
+Sitemap:
+User-agent: *
+Allow: /
+
+Sitemap: https://seipatichirwa568-star.github.io/sithole_st10478370_POE/
+
